@@ -10,7 +10,7 @@ const Header = () => {
 
         <section>
             <h1>Your favourite tunes</h1>
-            <p>All <BiSun /> and all <BiMoon/> </p>
+            <p>All <BiSun className='sunIcon' /> and all <BiMoon className='moonIcon'/> </p>
         </section>
     </div>
   )

@@ -9,6 +9,23 @@
     background-color: rgb(255, 164, 156);
     h1{
         color: #fff;
+        font-size: 42px
+    }
+    p{
+        font-size: 24px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+    .sunIcon{
+        font-size: 34px;
+        color: yellow;
+        margin: 0 8px;
+    }
+    .moonIcon{
+        font-size: 30px;
+        color: rgb(40, 40, 40);
+        margin-left: 8px;
     }
     img{
         height: 240px;
