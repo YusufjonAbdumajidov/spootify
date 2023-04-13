@@ -1,0 +1,17 @@
+.header{
+    // border: 1px solid #111;
+    height: 22vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    background-color: rgb(255, 164, 156);
+    h1{
+        color: #fff;
+    }
+    img{
+        height: 240px;
+        transform: rotateY(160deg)
+    }
+}
