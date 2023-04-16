@@ -4,6 +4,7 @@ import { BiSearchAlt2, BiBarChartSquare } from 'react-icons/bi';
 import { AiFillHeart } from 'react-icons/ai';
 import { MdPlaylistAdd } from 'react-icons/md';
 import avatarImage from "../images/avatar.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -14,11 +15,25 @@ const Navbar = () => {
         </header>
         <nav>
             <ul>
-                <li><a href="/"> <BsHeadphones className='icon' /> Discover</a></li>
-                <li><a href="/"><BiSearchAlt2 className='icon' />Search</a></li>
-                <li><a href="/"><AiFillHeart className='icon' />Favourites</a></li>
-                <li><a href="/"><MdPlaylistAdd className='icon' /> Playlist</a></li>
-                <li><a href="/">< BiBarChartSquare className='icon' /> Charts</a></li>
+                <Link to="/">
+                <li> <BsHeadphones className='icon' /> Discover</li>
+                </Link>
+
+                <Link to="/Search">
+                <li><BiSearchAlt2 className='icon' />Search</li>
+                </Link>
+
+                <Link to="/Favourites">
+                <li><AiFillHeart className='icon' />Favourites</li>
+                </Link>
+
+                <Link to="/Playlist">
+                <li><MdPlaylistAdd className='icon' /> Playlist</li>
+                </Link>
+
+                <Link to="/Charts">
+                <li>< BiBarChartSquare className='icon' /> Charts</li>
+                </Link>
             </ul>
         </nav>
     </div>
