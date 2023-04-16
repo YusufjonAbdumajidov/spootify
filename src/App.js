@@ -13,6 +13,7 @@ function App() {
     <div className="App">
      <Navbar />
      <Header />
+     <main>
      <Routes>
       <Route path="/" element={<Discover />} />
       <Route path="/Search" element={<Search />} />
@@ -20,6 +21,7 @@ function App() {
       <Route path="/Playlist" element={<Playlist />} />
       <Route path="/Charts" element={<Charts />} />
      </Routes>
+     </main>
     </div>
   );
 }
