@@ -8,7 +8,11 @@ import Playlist from "./Components/Playlist";
 import Charts from "./Components/Charts"; 
 import { Routes, Route } from "react-router-dom";
 
+
 function App() {
+ 
+
+   
   return (
     <div className="App">
      <Navbar />
