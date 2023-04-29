@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 const Discover = (props ) => {
   const location = useLocation()
-  console.log(props.location.state);
+  console.log(this.props.location.state);
   return (
     <div>Discover</div>
   )

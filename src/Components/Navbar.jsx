@@ -6,6 +6,8 @@ import { MdPlaylistAdd } from 'react-icons/md';
 import avatarImage from "../images/avatar.svg";
 import { Link } from "react-router-dom";
 
+// Make an API call here to the server to get the data
+
 const Navbar = (allData) => {
   // console.log(allData);
   return (
