@@ -27,7 +27,8 @@ function App() {
       numberOfTopResults: '5'
     },
     headers: {
-      'X-RapidAPI-Key': '4af006ccc7mshc0f072f880e50b5p16e687jsne19cf5dabfe8',
+      'content-type': 'application/octet-stream',
+      'X-RapidAPI-Key': 'd467b9ef16msh6eec210938822d4p1436a7jsnf278f17c9ee7',
       'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
     }
   };
@@ -35,12 +36,12 @@ function App() {
   
   
   useState(() => {
-    axios.request(options).then(function (response) {
+    try {
+      const response = await axios.request(options);
       console.log(response.data);
-      setAlbums(response.data);
-    }).catch(function (error) {
+    } catch (error) {
       console.error(error);
-    });
+    }
 
   }, [])
     
