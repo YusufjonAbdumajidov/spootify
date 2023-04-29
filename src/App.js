@@ -16,7 +16,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [allData, setAllData] = useState();
-  const navigate = useNavigate();
+
  
  
   const options = {
@@ -48,28 +48,14 @@ function App() {
    }
     
    useEffect(() => {
-    fetchData();
-
-    
-    
+    fetchData();    
    }, [])
-
-
- 
-    navigate('/', { state:  allData  });
-
-    
-    
-
-   
-    
-    console.log(allData);
-  
-
+     
+  console.log(allData);
    
   return (
     <div className="App">
-     <Navbar />
+     <Navbar allData={allData} />
      <Header />
      <main>
      <Routes>

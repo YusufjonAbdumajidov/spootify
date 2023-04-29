@@ -1,10 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-const Discover = (    ) => {
-  const {state} = useLocation();
-  const { allData } = state;
-  console.log(allData);
+const Discover = (props ) => {
+  const location = useLocation()
+  console.log(props.location.state);
   return (
     <div>Discover</div>
   )

@@ -6,7 +6,8 @@ import { MdPlaylistAdd } from 'react-icons/md';
 import avatarImage from "../images/avatar.svg";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (allData) => {
+  // console.log(allData);
   return (
     <div className="navbar">
         <header>
@@ -15,7 +16,7 @@ const Navbar = () => {
         </header>
         <nav>
             <ul>
-                <Link to="/">
+                <Link to={{pathname: "/", state: allData}}>
                 <li> <BsHeadphones className='icon' /> Discover</li>
                 </Link>
 
