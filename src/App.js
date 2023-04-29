@@ -35,15 +35,20 @@ function App() {
   
   
   
-  useState(() => {
+   async function fetchData(){
     try {
       const response = await axios.request(options);
       console.log(response.data);
     } catch (error) {
       console.error(error);
     }
+   }
+    
+   useEffect(() => {
+    fetchData();
+   })
 
-  }, [])
+
     
     console.log(albums);
   
