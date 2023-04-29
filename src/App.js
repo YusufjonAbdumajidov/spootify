@@ -14,7 +14,7 @@ import { Routes, Route } from "react-router-dom";
 
 
 function App() {
-  const [albums, setAlbums] = useState();
+  const [allData, setAllData] = useState();
  
   const options = {
     method: 'GET',
@@ -38,7 +38,7 @@ function App() {
    async function fetchData(){
     try {
       const response = await axios.request(options);
-      console.log(response.data);
+      setAllData(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -46,11 +46,11 @@ function App() {
     
    useEffect(() => {
     fetchData();
-   })
+   }, [])
 
 
     
-    console.log(albums);
+    console.log(allData);
   
 
    
@@ -60,7 +60,7 @@ function App() {
      <Header />
      <main>
      <Routes>
-      <Route path="/" element={<Discover />} />
+      <Route path="/" element={<Discover albums={allData.albums} />} />
       <Route path="/Search" element={<Search />} />
       <Route path="/Favourites" element={<Favourites />} />
       <Route path="/Playlist" element={<Playlist />} />

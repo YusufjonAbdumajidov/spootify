@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Discover = () => {
+const Discover = (  albums  ) => {
+  console.log(albums);
   return (
     <div>Discover</div>
   )
