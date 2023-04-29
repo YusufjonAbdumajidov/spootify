@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
+import {useNavigate} from "react-router-dom"
 
 import "./styles/index.scss"
 import Navbar from "./Components/Navbar";
@@ -15,6 +16,8 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [allData, setAllData] = useState();
+  const navigate = useNavigate();
+ 
  
   const options = {
     method: 'GET',
@@ -46,9 +49,19 @@ function App() {
     
    useEffect(() => {
     fetchData();
+
+    
+    
    }, [])
 
 
+ 
+    navigate('/', { state:  allData  });
+
+    
+    
+
+   
     
     console.log(allData);
   
@@ -60,7 +73,7 @@ function App() {
      <Header />
      <main>
      <Routes>
-      <Route path="/" element={<Discover albums={allData.albums} />} />
+      <Route path="/" element={<Discover  />} />
       <Route path="/Search" element={<Search />} />
       <Route path="/Favourites" element={<Favourites />} />
       <Route path="/Playlist" element={<Playlist />} />
