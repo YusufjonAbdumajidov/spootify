@@ -28,7 +28,7 @@ const Discover = (  ) => {
    async function fetchData(){
     try {
       const response = await axios.request(options);
-      setAlbums(response.data.albums);
+      setAlbums(response.data.albums.items);
     } catch (error) {
       console.error(error);
     }
@@ -42,7 +42,11 @@ const Discover = (  ) => {
 
   
   return (
-    <div>Discover</div>
+    <div>
+      {albums?.map((item) => {
+        console.log(item)
+      })}
+    </div>
   )
 }
 
