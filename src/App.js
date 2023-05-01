@@ -1,6 +1,4 @@
-import axios from "axios";
-import { useState, useEffect } from 'react';
-import {useNavigate} from "react-router-dom"
+
 
 import "./styles/index.scss"
 import Navbar from "./Components/Navbar";

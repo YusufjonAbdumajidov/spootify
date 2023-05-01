@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import DiscoverItem from './DiscoverItem';
+
 
 const Discover = (  ) => {
 
@@ -40,11 +40,18 @@ const Discover = (  ) => {
      
   console.log(albums);
 
+ 
   
   return (
-    <div>
+    <div className='discover'>
+      <h1>Discover</h1>
       {albums?.map((item) => {
-        <DiscoverItem item={item} />
+        return (
+          <div key={item.id}>
+            {/* <img src={} alt={item.name} /> */}
+            <p>{item.name}</p>
+          </div>
+        )
       })}
     </div>
   )
