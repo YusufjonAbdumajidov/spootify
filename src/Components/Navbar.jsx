@@ -1,22 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BsHeadphones } from 'react-icons/bs';
 import { BiSearchAlt2, BiBarChartSquare } from 'react-icons/bi';
 import { AiFillHeart } from 'react-icons/ai';
 import { MdPlaylistAdd } from 'react-icons/md';
 import avatarImage from "../images/avatar.svg";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import {useNavigate} from "react-router-dom"
+
 
 // Make an API call here to the server to get the data
 
 const Navbar = () => {
-  // console.log(allData);
-
-
-
-  
-
 
 
   return (
