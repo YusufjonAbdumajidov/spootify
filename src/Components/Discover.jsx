@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import { useLocation } from 'react-router-dom';
+import DiscoverItem from './DiscoverItem';
 
 const Discover = (  ) => {
 
@@ -44,7 +44,7 @@ const Discover = (  ) => {
   return (
     <div>
       {albums?.map((item) => {
-        console.log(item)
+        <DiscoverItem item={item} />
       })}
     </div>
   )
