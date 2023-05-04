@@ -40,7 +40,7 @@ const Discover = (  ) => {
     fetchData();    
    }, [])
      
-  console.log(albums);
+  // console.log(albums);
 
  
   
@@ -48,10 +48,12 @@ const Discover = (  ) => {
     <div className='discover'>
       <h1>Discover</h1>
       {albums?.map((item) => {
+        console.log(item)
         return (
           <div key={item.id}>
-            {/* <img src={} alt={item.name} /> */}
-            <p>{item.name}</p>
+            <audio src={item.data.uri}></audio>
+            <img src={item.data.uri} alt={item.name} />
+            <p>{item.data.artists.items[0].profile.name}</p>
           </div>
         )
       })}
