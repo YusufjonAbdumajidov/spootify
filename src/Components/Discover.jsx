@@ -42,18 +42,15 @@ const Discover = (  ) => {
      
   // console.log(albums);
 
- 
-  
   return (
     <div className='discover'>
-      <h1>Discover</h1>
       {albums?.map((item) => {
         console.log(item)
         return (
-          <div key={item.id}>
-            <audio src={item.data.uri}></audio>
-            <img src={item.data.uri} alt={item.name} />
+          <div className='item_container' key={item.id}>
+            <img src={item.data.coverArt.sources[0].url} alt={item.name} height={"260px"} width={"260px"} />
             <p>{item.data.artists.items[0].profile.name}</p>
+            <audio src={item.data.artists.items[0].uri} controls />
           </div>
         )
       })}
