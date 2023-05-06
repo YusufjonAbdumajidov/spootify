@@ -43,17 +43,19 @@ const Search = () => {
   console.log(artists);
 
 
-  return (
+  return <>
     <div className='searchContainer'>
+    <input type="search" className='searchInput' placeholder='Search...' />
       {artists?.map(art => {
         console.log(art)
         return <div className='item_container' key={art.data.profile.name}>
           <p>{art.data.profile.name}</p>
+          <audio src={art.data.uri} controls />
           <img src={art.data.visuals.avatarImage.sources[0].url} alt="avatar" height={"260px"} width={"260px"} />
         </div>
       })}
     </div>
-  )
+    </>
 }
 
 export default Search
