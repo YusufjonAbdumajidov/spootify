@@ -44,7 +44,15 @@ const Search = () => {
 
 
   return (
-    <div>Search</div>
+    <div className='searchContainer'>
+      {artists?.map(art => {
+        console.log(art)
+        return <div className='item_container' key={art.data.profile.name}>
+          <p>{art.data.profile.name}</p>
+          <img src={art.data.visuals.avatarImage.sources[0].url} alt="avatar" height={"260px"} width={"260px"} />
+        </div>
+      })}
+    </div>
   )
 }
 
