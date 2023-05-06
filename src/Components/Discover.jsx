@@ -45,7 +45,7 @@ const Discover = (  ) => {
   return (
     <div className='discover'>
       {albums?.map((item) => {
-        console.log(item)
+        // console.log(item)
         return (
           <div className='item_container' key={item.id}>
             <img src={item.data.coverArt.sources[0].url} alt={item.name} height={"260px"} width={"260px"} />
