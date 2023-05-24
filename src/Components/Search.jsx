@@ -58,4 +58,4 @@ const Search = () => {
     </>
 }
 
-export default
+export default Search;
