@@ -36,9 +36,9 @@ const Search = () => {
     }
    }
     
-  //  useEffect(() => {
-  //   fetchData();    
-  //  }, [])
+   useEffect(() => {
+    fetchData();    
+   }, [])
      
   console.log(artists);
 
