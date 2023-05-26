@@ -44,7 +44,7 @@ const Search = () => {
 
 
   return <>
-    <div className='searchContainer'>
+    <div className=''>
     <input type="search" className='searchInput' placeholder='Search...' />
       {artists?.map(art => {
         console.log(art)
